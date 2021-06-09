@@ -39,7 +39,6 @@ public class StudentService {
         studentRepository.deleteById(id);
     }
 
-    @Transactional
     public void updateStudent(Long id, String name, String email) {
         Student student = studentRepository.findById(id).orElseThrow(
                 () -> new IllegalStateException("syudent not found")
